@@ -27,6 +27,7 @@ jobs:
           uses: Azure/container-scan@v0.1
           with:
             image-name: ${{ env.IMAGE_NAME }}
+            severity-threshold: CRITICAL
 
         - name: 'Build and push image'
           uses: azure/docker-login@v1
