@@ -36,7 +36,9 @@ jobs:
         SECRET: dummy
         NAMESPACE: dummy
       steps:
-
+      
+      - uses: actions/checkout@main
+      
       # Set the target Azure Kubernetes Service (AKS) cluster. 
       - uses: azure/aks-set-context@v1
         with:
